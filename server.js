@@ -7,6 +7,7 @@ var request = require("request");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var handlebars = require("handlebars");
+var PORT = process.env.PORT || 3000;
 //var models= require("/models")
 
 mongoose.Promise = Promise;
@@ -33,5 +34,5 @@ require("./routes/news.js")(app);
 //require("./routes/post.js")(app);
 
 app.listen(3000, function() {
- 	console.log("App running on port 3000!");
+ 	console.log("App running on port "+ PORT);
 });

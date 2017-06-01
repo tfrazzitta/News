@@ -99,6 +99,22 @@ app.get("/articles",function(req,res){
 })
 
 
+// app.get("/post",function(req,res){
+//   console.log(req.body)
+//   news.find({_id: req.params.id}).exec(function(error,data){
+    
+//      if(error){
+//         res.send(error)
+//       }
+//       else{
+//         res.send(data)
+//         console.log(data)
+//       }
+//    })
+     
+// })
+
+
 
 
 app.get("/post/:id",function(req,res){
@@ -174,7 +190,7 @@ app.post("/delete/:id", function(req, res) {
            res.send(error);
         }
             res.json(data);
-            console.log("doc 2" + data)
+            // console.log("doc 2" + data)
         })
      
 })
