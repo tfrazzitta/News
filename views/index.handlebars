@@ -1,0 +1,35 @@
+	<div class="container-fluid">
+
+<div class="jumbotron" id="main">
+<h3>click here</h3>
+<form class="create-update-form" action="/articles" method="GET">
+  <div class="form-group">
+    <label for="ca"></label>
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+  <div class="row">
+
+    <div class="col-sm-7" style="background-color:lavenderblush;">
+ <ol id="first">
+  <h3>Articles</h3>
+  {{#each news}}
+  <li>
+   <p>{{this.id}}</p>
+    <p>{{this.title}}</p>
+     <p>{{this.link}} </p>
+    <form action="/{{this.id}}?_method=PUT" method="POST">
+    <input type="hidden" name="devoured" value="1">
+    <button type="submit" id="delete" value="Submit" class="btn btn-primary" >Devoured</button>
+    </form>
+ </li>
+  {{/each}}
+</ol>
+
+
+    </div>
+    <div class="col-sm-5" style="background-color:lavender;">Posts</div>
+  </div>
+  
+</div>
